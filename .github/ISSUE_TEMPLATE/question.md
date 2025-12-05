@@ -13,7 +13,6 @@ What would you like to know?
 ## Context
 
 Please provide context for your question:
-
 - What are you trying to accomplish?
 - What have you already tried?
 - Where did you look for answers?
@@ -21,7 +20,6 @@ Please provide context for your question:
 ## Related Documentation
 
 Have you checked the following resources?
-
 - [ ] This documentation site
 - [ ] [Official Hytale Blog](https://hytale.com/news)
 - [ ] [Hytale Modding Strategy Post](https://hytale.com/news/2025/11/hytale-modding-strategy-and-status)
@@ -31,7 +29,6 @@ Have you checked the following resources?
 ## Your Skill Level
 
 This helps us provide an appropriate answer:
-
 - [ ] New to Hytale modding
 - [ ] Some experience with modding
 - [ ] Experienced modder
@@ -40,7 +37,6 @@ This helps us provide an appropriate answer:
 ## Modding Category
 
 What aspect of Hytale modding does your question relate to?
-
 - [ ] Server plugins (Java)
 - [ ] Data assets (JSON)
 - [ ] Art assets (Blockbench, textures, models)

@@ -133,7 +133,6 @@ Security patches are applied as follows:
 ## Contact
 
 For urgent security matters that cannot be disclosed publicly, please use:
-
 - GitHub's security advisory feature (preferred)
 - Email: `outreach@itsneil.dev`
 

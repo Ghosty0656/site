@@ -39,7 +39,6 @@ If applicable, add screenshots to help explain your problem.
 ## Additional Context
 
 Add any other context about the problem here. This might include:
-
 - When did you first notice this issue?
 - Does it happen consistently or intermittently?
 - Have you tried any workarounds?
