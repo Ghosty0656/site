@@ -10,6 +10,7 @@ import { getMDXComponents } from "@/mdx-components";
 import type { Metadata } from "next";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import { branch } from "@/git-info.json";
+import { ViewTransition } from "react";
 
 export default async function Page(
   props: PageProps<"/[lang]/docs/[[...slug]]">,
@@ -21,27 +22,29 @@ export default async function Page(
   const MDX = page.data.body;
 
   return (
-    <DocsPage
-      toc={page.data.toc}
-      full={page.data.full}
-      editOnGithub={{
-        owner: "HytaleModding",
-        repo: "site",
-        path: `content/docs/${page.path}`,
-        sha: branch,
-      }}
-    >
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
-      <DocsBody>
-        <MDX
-          components={getMDXComponents({
-            // this allows you to link to other pages with relative file paths
-            a: createRelativeLink(source, page),
-          })}
-        />
-      </DocsBody>
-    </DocsPage>
+    <ViewTransition enter="docs-transition" exit="docs-transition">
+      <DocsPage
+        toc={page.data.toc}
+        full={page.data.full}
+        editOnGithub={{
+          owner: "HytaleModding",
+          repo: "site",
+          path: `content/docs/${page.path}`,
+          sha: branch,
+        }}
+      >
+        <DocsTitle>{page.data.title}</DocsTitle>
+        <DocsDescription>{page.data.description}</DocsDescription>
+        <DocsBody>
+          <MDX
+            components={getMDXComponents({
+              // this allows you to link to other pages with relative file paths
+              a: createRelativeLink(source, page),
+            })}
+          />
+        </DocsBody>
+      </DocsPage>
+    </ViewTransition>
   );
 }
 
