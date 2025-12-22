@@ -19,7 +19,8 @@
 
   "misc": {
     "loading": "Loading...",
-    "gitInfoUnavailable": "Git info not available"
+    "gitInfoUnavailable": "Git info not available",
+    "credit": "Written by"
   },
 
   "meta": {
