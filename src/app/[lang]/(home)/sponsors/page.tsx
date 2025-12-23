@@ -30,7 +30,7 @@ export default function SponsorsPage() {
       <div className="container mx-auto flex flex-1 flex-col items-center gap-8 px-12 py-8 lg:flex-row lg:justify-between lg:py-0">
         <div className="max-w-xl space-y-6 max-lg:max-w-lg max-lg:py-32 max-lg:text-center">
           <h1 className="text-4xl font-semibold text-balance">
-            Sponsors
+            Support Us
           </h1>
           <h2 className="text-muted-foreground text-lg text-balance">
             HytaleModding is an open-source community project, and part of managing the community involves paying for services, servers and infrastructure, like hosting this website. If you would like to support the project, consider becoming a sponsor!

@@ -19,6 +19,7 @@ import ElectricMotor from "./(showcaseImages)/HyEnergy_Electric_Motor.gif";
 import HyFableLogo from "./(showcaseImages)/HyFableLogo.jpg";
 import HyFableBanner from "./(showcaseImages)/HyFableBanner.jpg";
 import { DiscordButton } from "./discord-button";
+import { SponsorButton } from "./support-button";
 import { GitInfoButton } from "@/components/git-info-button";
 
 type ProjectType = 'art' | 'website' | 'server' | 'mod';
@@ -280,6 +281,7 @@ export default function HomePage() {
               </Link>
             </Button>
             <DiscordButton />
+            <SponsorButton />
           </div>
         </div>
       </div>
