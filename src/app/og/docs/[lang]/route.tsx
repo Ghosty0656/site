@@ -7,14 +7,15 @@ export const revalidate = false;
 
 export async function GET(
   _req: Request,
-  { params }: RouteContext<"/og/docs/[lang]/[...slug]">,
+  { params }: { params: Promise<{ lang: string }> },
 ) {
-  const { slug, lang } = await params;
+  const { lang } = await params;
   if (lang === "ar-SA") {
-      return notFound();
+    return notFound();
   }
-  const page = source.getPage(slug, lang);
-  if (!page) notFound();
+
+  const page = source.getPage([], lang);
+  if (!page) return notFound();
 
   return new ImageResponse(
     (
@@ -33,9 +34,8 @@ export async function GET(
 
 export function generateStaticParams() {
   return source.getPages()
+    .filter((page) => getPageImage(page).segments.length === 0) 
     .map((page) => ({
       lang: page.locale,
-      slug: getPageImage(page).segments,
-    }))
-    .filter((param) => param.slug.length > 0); // Exclude index pages
+    }));
 }
