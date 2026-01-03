@@ -36,6 +36,8 @@ export function ImageZoom({
   rmiz,
   ...props
 }: ImageZoomProps) {
+  const isExternal = typeof props.src === 'string' && props.src.startsWith('http');
+
   return (
     <Zoom
       zoomMargin={20}
@@ -48,10 +50,23 @@ export function ImageZoom({
       }}
     >
       {children ?? (
-        <Image
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 900px"
-          {...props}
-        />
+        isExternal ? (
+          <img
+            src={getImageSrc(props.src)}
+            alt={props.alt}
+            width={props.width}
+            height={props.height}
+            title={props.title}
+            loading={props.loading}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 900px"
+            style={{ maxWidth: '100%', height: 'auto', ...props.style }}
+          />
+        ) : (
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 900px"
+            {...props}
+          />
+        )
       )}
     </Zoom>
   );
