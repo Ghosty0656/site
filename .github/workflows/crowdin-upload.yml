@@ -13,10 +13,10 @@ jobs:
       - name: Upload sources and translations to Crowdin
         uses: crowdin/github-action@v2
         with:
-          upload_sources: true           
-          upload_translations: true      
-          download_translations: false   
-          create_pull_request: false     
+          upload_sources: true
+          upload_translations: true
+          download_translations: false
+          create_pull_request: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}

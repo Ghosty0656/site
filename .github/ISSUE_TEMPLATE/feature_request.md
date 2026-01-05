@@ -27,6 +27,7 @@ A clear and concise description of what the problem is. For example: "I'm always
 **Describe the solution you'd like, if any**
 
 A clear and concise description of what you want to happen. Include:
+
 - What should be added or changed?
 - How would this help users?
 - What would the user experience look like?

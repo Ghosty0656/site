@@ -1,11 +1,14 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
-export function deepMerge<T extends Record<string, any>>(base: T, override: T): T {
+export function deepMerge<T extends Record<string, any>>(
+  base: T,
+  override: T,
+): T {
   const result = { ...base };
 
   for (const key in override) {

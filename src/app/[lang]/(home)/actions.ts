@@ -54,10 +54,12 @@ export async function getSponsors(): Promise<Sponsor[]> {
       (member: any) => member.role === "BACKER" && member.isActive === true,
     );
 
-    const uniqueBackers = activeBackers.filter((member: any, index: number, array: any[]) =>
-      index === array.findIndex((m: any) => 
-        m.name === member.name && m.profile === member.profile
-      )
+    const uniqueBackers = activeBackers.filter(
+      (member: any, index: number, array: any[]) =>
+        index ===
+        array.findIndex(
+          (m: any) => m.name === member.name && m.profile === member.profile,
+        ),
     );
 
     return uniqueBackers.map((member: any) => ({

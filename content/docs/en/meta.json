@@ -1,13 +1,13 @@
 {
-    "pages": [
-        "---Introduction---",
-        "index",
-        "quick-start",
-        "established-information",
-        "---Guides---",
-        "...guides",
-        "---Community---",
-        "projects",
-        "contributing"
-    ]
+  "pages": [
+    "---Introduction---",
+    "index",
+    "quick-start",
+    "established-information",
+    "---Guides---",
+    "...guides",
+    "---Community---",
+    "projects",
+    "contributing"
+  ]
 }

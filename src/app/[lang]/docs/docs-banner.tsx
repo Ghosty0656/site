@@ -19,7 +19,7 @@ export function DocsFooter() {
   return (
     <Link
       href={`https://github.com/HytaleModding/site/tree/${branch}`}
-      className="flex gap-2 p-2 rounded-md border mt-4 items-center"
+      className="mt-4 flex items-center gap-2 rounded-md border p-2"
     >
       <ExternalLinkIcon className="size-4" />
       <span>{branch}</span>

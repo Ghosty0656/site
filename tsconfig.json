@@ -30,7 +30,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
-, "src/app/[lang]/docs/[[...slug]]/opengraph-image.tsx"  ],
+    ".next/dev/types/**/*.ts",
+    "src/app/[lang]/docs/[[...slug]]/opengraph-image.tsx"
+  ],
   "exclude": ["node_modules"]
 }

@@ -29,8 +29,8 @@ import ElectricMotor from "./(showcaseImages)/HyEnergy_Electric_Motor.gif";
 import WulfrumTriangle from "./(showcaseImages)/Wulfrum_triangle.gif";
 import HylandiaBanner from "./(showcaseImages)/Hylandia_Banner.png";
 import HylandiaLogo from "./(showcaseImages)/Hylandia_Logo.png";
-import MagicCircleGust from "./(showcaseImages)/MagicCircleGust.gif"
-import Shroomie from "./(showcaseImages)/Shroomie.gif"
+import MagicCircleGust from "./(showcaseImages)/MagicCircleGust.gif";
+import Shroomie from "./(showcaseImages)/Shroomie.gif";
 import { DiscordButton } from "./discord-button";
 import { SponsorButton } from "./support-button";
 import { GitInfoButton } from "@/components/git-info-button";
@@ -248,14 +248,14 @@ export default function HomePage() {
       author: "by Saqvobase",
       image: MagicCircleGust,
       link: "",
-      type: "art"
+      type: "art",
     },
     {
       title: "Shroomie",
       author: "by Miyako Hikari",
       image: Shroomie,
       link: "",
-      type: "art"
+      type: "art",
     },
     {
       title: "Hylandia",
@@ -264,8 +264,9 @@ export default function HomePage() {
       banner: HylandiaBanner,
       link: "https://discord.gg/hylandia",
       type: "server",
-      description: "A progressive minigames server for Hytale where your progress actually matters.",
-    }
+      description:
+        "A progressive minigames server for Hytale where your progress actually matters.",
+    },
   ];
 
   const shuffledItems = [...showcaseItems].sort(() => Math.random() - 0.5);
@@ -333,20 +334,20 @@ export default function HomePage() {
         </div>
       </div>
 
-        <div className="mt-auto mb-8 w-full py-8">
-          <Marquee className="h-64 w-full">
-            <MarqueeFade side="left" className="w-12" />
-            <MarqueeContent speed={100} pauseOnHover autoFill={false}>
-              {repeatedItems.map((item, index) => (
-                <MarqueeItem key={`${item.title}-${index}`} className="mx-2">
-                  <ShowcaseCard item={item} />
-                </MarqueeItem>
-              ))}
-            </MarqueeContent>
-            <MarqueeFade side="right" className="w-12" />
-          </Marquee>
+      <div className="mt-auto mb-8 w-full py-8">
+        <Marquee className="h-64 w-full">
+          <MarqueeFade side="left" className="w-12" />
+          <MarqueeContent speed={100} pauseOnHover autoFill={false}>
+            {repeatedItems.map((item, index) => (
+              <MarqueeItem key={`${item.title}-${index}`} className="mx-2">
+                <ShowcaseCard item={item} />
+              </MarqueeItem>
+            ))}
+          </MarqueeContent>
+          <MarqueeFade side="right" className="w-12" />
+        </Marquee>
 
-          {/* <div className="mt-6 flex justify-center">
+        {/* <div className="mt-6 flex justify-center">
             <Button asChild>
               <Link href={params?.lang?.toString() + "/projects"}>
                 <ArrowUpRightIcon className="mr-2 h-4 w-4" />
@@ -354,7 +355,7 @@ export default function HomePage() {
               </Link>
             </Button>
           </div> */}
-        </div>
+      </div>
     </div>
   );
 }

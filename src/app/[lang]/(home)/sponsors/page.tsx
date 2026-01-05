@@ -18,7 +18,7 @@ export default function SponsorsPage() {
       <div className="container mx-auto flex flex-1 flex-col items-center justify-center px-2 py-8">
         <div className="space-y-16 py-32 text-center max-lg:max-w-lg">
           <ViewTransition name="hero" share="blur-scale-transition">
-            <div className="flex max-w-4xl flex-col items-center justify-center space-y-4 mx-auto">
+            <div className="mx-auto flex max-w-4xl flex-col items-center justify-center space-y-4">
               <h1 className="text-4xl font-semibold text-balance">
                 {messages.sponsors.title}
               </h1>
