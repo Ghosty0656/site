@@ -84,7 +84,19 @@ git --version
 
 ## Setting Up Your Workspace
 
-### 1. Clone the Plugin Template
+### 1. Add HytaleServer.jar Dependency
+
+Before you can start modding, you need to add the HytaleServer.jar file as a dependency:
+
+1. **Download HytaleServer.jar** using the [Hytale Downloader](link-to-hytale-support-guide)
+2. **Add to IntelliJ IDEA**:
+   - Click on **"File"** at the top left
+   - Go to **"Project Structure"**
+   - Go to **"Libraries"**
+   - Click on the **+ icon**
+   - Select the **HytaleServer.jar** you downloaded
+
+### 2. Clone the Plugin Template
 
 Instead of creating an empty directory, we'll use the official Hytale plugin template:
 
@@ -94,7 +106,7 @@ git clone https://github.com/HytaleModding/plugin-template.git MyFirstMod
 cd MyFirstMod
 ```
 
-### 2. Configure the Project
+### 3. Configure the Project
 
 Remove the existing Git history and initialize your own:
 
@@ -108,7 +120,7 @@ git add .
 git commit -m "Initial commit from plugin template"
 ```
 
-### 3. Configure Git Identity
+### 4. Configure Git Identity
 
 Set up your Git identity for future commits:
 
@@ -117,7 +129,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-### 4. Open in IntelliJ IDEA
+### 5. Open in IntelliJ IDEA
 
 1. Open IntelliJ IDEA
 2. Click "Open" and navigate to your `MyFirstMod` directory
