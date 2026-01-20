@@ -46,18 +46,18 @@ const config = {
         source: "/drakon-guide/:path*",
         destination:
           "https://docs.google.com/document/d/10BTtTlM0KlK18l-hLkU6-eRiWUTFljcvnaqF593cX8E/edit?tab=t.0",
-        permanent: false,
+        permanent: true,
       },
       {
         source: "/drakon-doc/:path*",
         destination:
           "https://docs.google.com/document/d/10BTtTlM0KlK18l-hLkU6-eRiWUTFljcvnaqF593cX8E/edit?tab=t.0",
-        permanent: false,
+        permanent: true,
       },
       {
-        source: "/docs/what-we-know-so-far/:path*",
-        destination: "/docs/en/established-information/:path*",
-        permanent: false,
+        source: "/en/docs/guides/ecs/hytale-ecs",
+        destination: "/en/docs/guides/ecs/hytale-ecs-theory",
+        permanent: true,
       },
     ];
   },

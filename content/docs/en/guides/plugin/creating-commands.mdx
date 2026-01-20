@@ -3,9 +3,9 @@ title: "Creating Commands"
 description: "Learn how to create custom commands for your Hytale mod."
 authors:
     - name: "Neil Revin"
-      link: "https://itsneil.dev"
+      url: "https://itsneil.dev"
     - name: "oskarscot"
-      link: "https://oskar.scot"
+      url: "https://oskar.scot"
 ---
 
 In this guide, you will learn how to create custom commands for your Hytale mod.
@@ -18,6 +18,8 @@ You can override the `execute` function to implement the command's behavior. It 
 It's important to know that `AbstractPlayerCommand` extends `AbstractAsyncCommand` meaning that commands do not execute on the main server thread. 
 
 You can use the `Store` along with the `Ref` to access all entity components like the `Player` component, `UUIDComponent` or `TransformComponent`.
+
+For more information about Hytale's Entity Component System visit the [Hytale ECS Theory](https://hytalemodding.dev/en/docs/guides/ecs/hytale-ecs-theory) guide.
 
 
 ```java
@@ -40,6 +42,45 @@ public class ExampleCommand extends AbstractPlayerCommand {
 
 }
 ```
+
+## Adding Arguments
+
+You may want your command to have arguments. To do this, you can use the `withRequiredArg` method. 
+
+```java
+public class ExampleCommand extends AbstractPlayerCommand {
+
+  public ExampleCommand() {
+    super("test", "Super test command!");
+  }
+
+  RequiredArg<String> messageArg = this.withRequiredArg("argument_name", "Argument Description", ArgTypes.STRING);
+
+  @Override
+  protected void execute(@Nonnull CommandContext commandContext, @Nonnull Store<EntityStore> store, @Nonnull Ref<EntityStore> ref, @Nonnull PlayerRef playerRef, @Nonnull World world) {
+
+    String message = messageArg.get(commandContext); // get the argument text by the player
+    player.sendMessage(Message.raw("Message Argument: " + message));
+  }
+
+}
+```
+
+
+### Optional Arguments
+
+Adding a optional argument is the same, only change is the method used to create it. You can use the `withOptionalArg` method.
+
+### ArgTypes
+
+The following ArgTypes are available (only lists common types):
+
+- `ArgTypes.STRING`
+- `ArgTypes.INTEGER`
+- `ArgTypes.BOOLEAN`
+- `ArgTypes.FLOAT`
+- `ArgTypes.DOUBLE`
+- `ArgTypes.UUID`
 
 ## Registering the Command
 
